@@ -31,9 +31,3 @@ jobs:
     displayName: Publish Test Results
     condition: always()
 
-
-public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
-}
