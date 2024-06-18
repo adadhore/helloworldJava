@@ -23,6 +23,9 @@ jobs:
   - script: checkov -d . --bc-api-key 71a8ea9e-bc22-4802-ab77-4aa4b637ba29::Q5c/oh/FSLbbVQ1opBtWDp05b4Y= --repo-id adadhore/helloworldJava --branch azure--pipelines -o cli -o junitxml --output-file-path console,CheckovReport.xml
     workingDirectory: $(System.DefaultWorkingDirectory)
     displayName: Run Checkov
+  - script: checkov -d . --bc-api-key 71a8ea9e-bc22-4802-ab77-4aa4b637ba29::Q5c/oh/FSLbbVQ1opBtWDp05b4Y= --repo-id adadhore/helloworldJava 
+    workingDirectory: $(System.DefaultWorkingDirectory)
+    displayName: Scan with Prisma Cloud
   - task: PublishTestResults@2
     inputs:
       testResultsFormat: 'JUnit'
